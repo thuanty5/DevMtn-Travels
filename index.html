@@ -25,7 +25,7 @@
 
 </head>
 
-<body>
+<body ng-controller="mainCtrl">
 <main role="main">
     <section class="home-page-top-container">
         <header>
@@ -42,11 +42,8 @@
         </header>
         <h1 class="intro-text">Discover</h1>
     </section>
-
-
-
+    
 <!-- Here we are placing the ui-view tag this is where our views will be injected when we change routes. -->
-
     <ui-view></ui-view>
 
 
@@ -58,6 +55,8 @@
 
 <!--Our Custom Script Files-->
 <script src="./js/app.js"></script>
+<script src="./js/controllers/mainController.js"></script>
+<script src="./js/services/mainService.js"></script>
 
 
 </body>
