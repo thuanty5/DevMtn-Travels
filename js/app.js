@@ -7,38 +7,37 @@ angular.module('devmtnTravel', ['ui.router'])
         $stateProvider
             .state('home',{
                 url:'/',
-                // template: "<p>testing</p>",
                 templateUrl: "../views/about.html",
-                // controller: ""
+                controller: "mainCtrl"
             })
-
-            
             .state('contact',{
                 url:'/contact',
-                // template: "<p>testing</p>",
                 templateUrl: "../views/contact.html",
                 controller: "mainCtrl"
             })
-
-
-
+            .state('about',{
+                url:'/about',
+                templateUrl: "../views/about-adventurers.html",
+                controller: "mainCtrl"
+            })
             .state('locations',{
                 url:'/locations',
-                // template: "<p>testing</p>",
                 templateUrl: "../views/locations.html",
-                // controller: ""
-            }).state("packages",{
-                url:'/packages',
-                // template: "<p>testing</p>",
-                templateUrl: "../views/packages.html",
-                // controller: ""
-            }).state('about',{
-                url:'/about',
-                // template: "<p>testing</p>",
-                templateUrl: "../about-advanturers/.html",
-                // controller: ""
+                controller: "locationsCtrl"
             })
-
-       
+            .state('packages',{
+                url:'/packages',
+                templateUrl: "../views/packages.html",
+                controller: "packagesCtrl"
+            })
+            .state('packagesCountry', {
+                url: '/packages/:country',
+                templateUrl: '../views/packages.html',
+                controller: 'packagesCtrl'
+            })
+            .state('booked', {
+                url: '/booked/:id',
+                templateUrl: '../views/booked.html',
+                controller: 'bookedCtrl'
+            })
     });
-

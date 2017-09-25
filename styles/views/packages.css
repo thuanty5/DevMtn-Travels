@@ -1,13 +1,15 @@
 .packages-main {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .package-card {
-    width:100%;
+    width:33.33%;
     text-align: center;
     margin-bottom: 20px;
     box-shadow: 0px 2px 4px 0px rgba(208,208,208,0.50);
+    
 }
 
 .package-card img {
@@ -45,7 +47,13 @@
 
 }
 
-@media(min-width: 800px) {
+@media screen and (max-width: 800px) {
+    .package-card {
+        width: 100%;
+    }
+}
+
+@media (min-width: 800px) {
     .packages-main {
         flex-direction: row;
     }
@@ -69,8 +77,7 @@
     }
 
     .package-card p {
-        height: 95px;
-
+        height: 120px;
     }
 
     .package-card button {
